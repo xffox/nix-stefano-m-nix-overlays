@@ -5,7 +5,7 @@ let
 
 in
 buildLuaPackage rec {
-  version = "0.1.1";
+  version = "0.1.3";
   name = "${pname}-${version}";
   inherit pname;
 
@@ -13,7 +13,7 @@ buildLuaPackage rec {
     owner = "stefano-m";
     repo = "lua-${pname}";
     rev = "v${version}";
-    sha256 = "1lz0v1sihxxlnn0z2x3wv8gr6xg4q5pw7da2x9hh9cgqgz4v4xib";
+    hash = "sha256-mws9T764NLv2ktJntGZYmakgSRGFqohgUaHVk0kH+LI=";
   };
 
   buildPhase = ":";
