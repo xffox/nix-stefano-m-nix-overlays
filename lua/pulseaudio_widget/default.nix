@@ -1,19 +1,24 @@
-{ pulseaudio_dbus, lua, buildLuaPackage, fetchFromGitHub }:
+{
+  pulseaudio_dbus,
+  lua,
+  buildLuaPackage,
+  fetchFromGitHub,
+}:
 let
 
   pname = "pulseaudio_widget";
 
 in
 buildLuaPackage rec {
-  version = "0.6.1";
+  version = "0.6.2-dev";
   name = "${pname}-${version}";
   inherit pname;
 
   src = fetchFromGitHub {
-    owner = "stefano-m";
+    owner = "xffox";
     repo = "awesome-${pname}";
-    rev = "v${version}";
-    sha256 = "1ccar5wxz38d2yh3xyrgzk8xhv171awmrn94b89y9f7ri88iiddv";
+    rev = "9174bfb2fb23c7785879214976157525d5807432";
+    sha256 = "0sxcm4j0h6x02s1pjdkz3crzxjd249hls6pip8r4jlck2xf19vma";
   };
 
   # FIXME: cannot find awesome libraries
